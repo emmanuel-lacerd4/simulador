@@ -22,16 +22,16 @@ function sw(receive) {
 
     // Lógica das chaves
     if (receive === 1 && sw1 === false) {
-        document.getElementById('sw1').src = "imagens/swon.png"
+        document.getElementById('sw1').src = "img/swon.png"
         sw1 = true
     } else if (receive === 1 && sw1 === true) {
-        document.getElementById('sw1').src = "imagens/swoff.png"
+        document.getElementById('sw1').src = "img/swoff.png"
         sw1 = false
     } else if (receive === 2 && sw2 === false) {
-        document.getElementById('sw2').src = "imagens/swon.png"
+        document.getElementById('sw2').src = "img/swon.png"
         sw2 = true
     } else if (receive === 2 && sw2 === true) {
-        document.getElementById('sw2').src = "imagens/swoff.png"
+        document.getElementById('sw2').src = "img/swoff.png"
         sw2 = false
     }
 
@@ -42,7 +42,7 @@ function sw(receive) {
         let beep = new Audio()
         beep.src = "glassbreaking.wav"
         beep.play()
-        document.getElementById('lamp').src = "imagens/broken.jpg"
+        document.getElementById('lamp').src = "img/broken.jpg"
         broken = true
     }
 
@@ -51,26 +51,26 @@ function sw(receive) {
     // Lógica do operador AND
     if (identify === "/simulador/and.html" && broken !== true) {
         if (sw1 === true && sw2 === true) {
-            document.getElementById('lamp').src = "imagens/on.jpg"
+            document.getElementById('lamp').src = "img/on.jpg"
         } else {
-            document.getElementById('lamp').src = "imagens/off.jpg"
+            document.getElementById('lamp').src = "img/off.jpg"
         }
     }
 
     // Lógica do operador OR
     if (identify === "/simulador/or.html" && broken !== true) {
         if (sw1 === true || sw2 === true) {
-            document.getElementById('lamp').src = "imagens/on.jpg"
+            document.getElementById('lamp').src = "img/on.jpg"
         } else {
-            document.getElementById('lamp').src = "imagens/off.jpg"
+            document.getElementById('lamp').src = "img/off.jpg"
         }
     }
     // Lógica do operador NOT
     if (identify === "/simulador/not.html" && broken !== true) {
         if (!sw1) {
-            document.getElementById('lamp').src = "imagens/on.jpg"
+            document.getElementById('lamp').src = "img/on.jpg"
         } else {
-            document.getElementById('lamp').src = "imagens/off.jpg"
+            document.getElementById('lamp').src = "img/off.jpg"
         }
     }
 }
